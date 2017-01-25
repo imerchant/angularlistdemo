@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app="listDemo">
+<head>
+    <title>ListDemo</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+
+</head>
+<body ng-cloak ng-controller="ListDemoController">
+
+<ul >
+    <li ng-repeat="item in items">
+        {{item.value}} - <button class="btn" ng-click="deleteItem(item.id)">Delete</button>
+    </li>
+</ul>
+
+<br/>
+<br/>
+
+<input type="text" placeholder="some text" ng-model="input"/>
+<button type="submit" ng-click="save(input)" class="btn btn-primary">Save</button>
+
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/underscore-1.4.4.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="app.js"></script>
+<script src="controllers/ListDemoController.js"></script>
+<script src="services/ItemData.js"></script>
+
+</body>
+</html>
